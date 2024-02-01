@@ -1,13 +1,3 @@
-<!--
-=========================================================
-Name        : index.html
-Assignment  : Lab 3 Exercise D
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : 31 jan 24 
-Description : Learning CSS.
-safaa tazin, Fahmdi sardar 
-=========================================================
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,53 +6,37 @@ safaa tazin, Fahmdi sardar
         #margin-demo {
             margin: 30px;
             border: 2px solid black;
-            /*Modify #margin-demo to have a margin of 30px and a solid black border of 2px. Also, the borders must fit the content.*/
         }
 
         .padding-demo {
-            /*Adjust .padding-demo to include 30px padding and a dashed red border of 2px.*/
             padding: 30px;
-        border: 2px dashed red;
+            border: 2px dashed red;
         }
 
         .container .nested-opacity {
-            /*Change the opacity of .nested-opacity to 0.2!*/
             opacity: 0.2;
         }
 
-        
         .inline-demo {
-            /*Change the display to see all elements of this type in a line.*/
-            display:inline-block;
+            display: inline-block;
             margin: 15px;
+            vertical-align: top; /* Align elements to the top to eliminate extra spacing */
         }
 
         .block-demo {
             text-align: center;
-            /*Ensure .block-demo centers its text.*/
         }
 
-        /*
-        Apply colors and float properties to the children of .block-demo. 
-        The first child should be red and stick to left side, the second blue and sit in the middle, and the third green and stick to right side. 
-        Here, you might need to look at the technique we used for the first and second children.
-        */
-
-        .block-demo > .inline-demo:first-child {            
-            /*
-            Add CSS that I stick the first child to the left side of the screen.
-            */
-            float: left; 
+        .block-demo > .inline-demo:first-child {
+            float: left;
             color: red;
-            
         }
 
-        .block-demo > .inline-demo:nth-child(2) {            
+        .block-demo > .inline-demo:nth-child(2) {
             color: blue;
-            margin: 0 auto; 
-            display: block; 
-
-        /* Add your css for the thrid child here. */
+            margin: 0 auto;
+            display: block;
+        }
 
         .block-demo > .inline-demo:nth-child(3) {
             float: right;
@@ -71,14 +45,12 @@ safaa tazin, Fahmdi sardar
 
         .image-demo {
             width: 50%;
-            /* Modify the .image-demo class to adjust the image's width to 50% of the screen. */
             border: 2px solid blue;
         }
 
         .hover-demo:hover {
             color: blue;
             cursor: grabbing;
-            /*Create a hover effect for .hover-demo that changes its color to blue and cursor to grabbing.*/
         }
     </style>
 </head>
@@ -97,13 +69,10 @@ safaa tazin, Fahmdi sardar
 
     <h2>CSS Display Property</h2>
     <div class="block-demo">
-        <div class="inline-demo"><span>I am red.</span></div>
-        <div class="inline-demo"><span>I am blue.</span></div>
-        <div class="inline-demo"><span>I am green.</span></div>
-    </div>    
+        <div class="inline-demo"><span>I am red.</span></div><div class="inline-demo"><span>I am blue.</span></div><div class="inline-demo"><span>I am green.</span></div>
+    </div>
 
     <h2>CSS Image Styling with Inline CSS</h2>
-    <!-- Add a dotted green border of 3px inline. Which style will win the competition? -->
     <img class="image-demo" style="" src="images/example.svg" alt="Demo Image">
 
     <h2>CSS Hover Effects</h2>
